@@ -14,9 +14,16 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
-  
+  this.amigos = amigos;
+  this.nombre = nombre;
+  busqueda = [];
+  for (i=0; i < amigos.length; i++){
+    if (amigos[i].nombre=nombre){
+      busqueda = amigos[i];
+    }    
+  } 
+  return busqueda;
 }
-
 // No modifiques nada debajo de esta linea //
 
 module.exports = buscarAmigo

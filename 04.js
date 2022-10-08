@@ -13,7 +13,16 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-
+  numeroinv = num;
+  let invertido = 0;
+  while (numeroinv != 0) {
+      invertido = 10 * invertido + numeroinv % 10
+      numeroinv = (Math.floor(numeroinv / 10))
+  }
+  if (num === invertido){
+      return true;
+  }
+  return false;
 }
 
 // No modifiques nada debajo de esta linea //
